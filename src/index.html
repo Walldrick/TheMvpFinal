@@ -5,13 +5,851 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TheMvpFinal</title>
+    <link rel="stylesheet" href="styles\index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="container-fluid">
+    <header class="row bg-primary headerClandestino">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Mi Sitio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Acerca de</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div>
+            tampocovas
+        </div>
+    </header>
+    <main class="row mainClandestino">
+        <div class="col-2 bg-white border-end py-4">
+            <h5 class="text-center mb-4">Filtros</h5>
+            <div class="px-3">
+                <h6>Categorías</h6>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="category1">
+                    <label class="form-check-label" for="category1">Sedanes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="category2">
+                    <label class="form-check-label" for="category2">SUVs</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="category3">
+                    <label class="form-check-label" for="category3">Coupés</label>
+                </div>
+
+                <h6 class="mt-4">Precio</h6>
+                <div class="form-group">
+                    <label for="priceRange">Rango de precio:</label>
+                    <input type="range" class="form-range" id="priceRange" min="0" max="100000" step="1000">
+                    <div class="d-flex justify-content-between">
+                        <span>$0</span>
+                        <span>$100,000</span>
+                    </div>
+                </div>
+
+                <h6 class="mt-4">Año</h6>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="year2020">
+                    <label class="form-check-label" for="year2020">2020</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="year2021">
+                    <label class="form-check-label" for="year2021">2021</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="year2022">
+                    <label class="form-check-label" for="year2022">2022</label>
+                </div>
+            </div>
+        </div>
+        <div class="col ">
+            <div class="container my-5">
+                <div class="row bg-dark text-white">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active">
+                                <div class="d-flex justify-content-around p-3">
+                                    <!-- Tarjeta 1 -->
+                                    <div class="card bg-secondary text-light" style="width: 20rem; cursor: pointer;"
+                                        data-bs-toggle="modal" data-bs-target="#carModal1">
+                                        <img src="https://picsum.photos/300/200"
+                                            class="card-img-top rounded mx-auto d-block mt-3" alt="Ford Mustang">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">Ford Mustang</h5>
+                                            <p class="card-text"><strong>Precio:</strong> $35,000</p>
+                                        </div>
+                                    </div>
+                                    <!-- Tarjeta 2 -->
+                                    <div class="card bg-secondary text-light" style="width: 20rem; cursor: pointer;"
+                                        data-bs-toggle="modal" data-bs-target="#carModal2">
+                                        <img src="https://picsum.photos/300/200"
+                                            class="card-img-top rounded mx-auto d-block mt-3" alt="Toyota Supra">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">Toyota Supra</h5>
+                                            <p class="card-text"><strong>Precio:</strong> $50,000</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+                                <div class="d-flex justify-content-around p-3">
+                                    <!-- Tarjeta 3 -->
+                                    <div class="card bg-secondary text-light" style="width: 20rem; cursor: pointer;"
+                                        data-bs-toggle="modal" data-bs-target="#carModal3">
+                                        <img src="https://picsum.photos/300/200"
+                                            class="card-img-top rounded mx-auto d-block mt-3" alt="Chevrolet Camaro">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">Chevrolet Camaro</h5>
+                                            <p class="card-text"><strong>Precio:</strong> $40,000</p>
+                                        </div>
+                                    </div>
+                                    <!-- Tarjeta 4 -->
+                                    <div class="card bg-secondary text-light" style="width: 20rem; cursor: pointer;"
+                                        data-bs-toggle="modal" data-bs-target="#carModal4">
+                                        <img src="https://picsum.photos/300/200"
+                                            class="card-img-top rounded mx-auto d-block mt-3" alt="Nissan 370Z">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">Nissan 370Z</h5>
+                                            <p class="card-text"><strong>Precio:</strong> $30,000</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="carousel-item">
+                                <div class="d-flex justify-content-around p-3">
+                                    <!-- Tarjeta 5 -->
+                                    <div class="card bg-secondary text-light" style="width: 20rem; cursor: pointer;"
+                                        data-bs-toggle="modal" data-bs-target="#carModal5">
+                                        <img src="https://picsum.photos/300/200"
+                                            class="card-img-top rounded mx-auto d-block mt-3" alt="BMW M4">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">BMW M4</h5>
+                                            <p class="card-text"><strong>Precio:</strong> $70,000</p>
+                                        </div>
+                                    </div>
+                                    <!-- Tarjeta 6 -->
+                                    <div class="card bg-secondary text-light" style="width: 20rem; cursor: pointer;"
+                                        data-bs-toggle="modal" data-bs-target="#carModal6">
+                                        <img src="https://picsum.photos/300/200"
+                                            class="card-img-top rounded mx-auto d-block mt-3" alt="Audi R8">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">Audi R8</h5>
+                                            <p class="card-text"><strong>Precio:</strong> $150,000</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal fade" id="carModal3" tabindex="-1" aria-labelledby="carModalLabel3"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header bg-secondary text-white">
+                                <h5 class="modal-title" id="carModalLabel3">Chevrolet Camaro - Detalles</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="https://picsum.photos/700/400" class="img-fluid mb-3 rounded"
+                                    alt="Chevrolet Camaro">
+                                <p><strong>Precio:</strong> $40,000</p>
+                                <p><strong>Año:</strong> 2021</p>
+                                <p><strong>Motor:</strong> 6.2L V8, 455hp</p>
+                                <p><strong>Descripción:</strong> El Camaro es un muscle car estadounidense clásico.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal para Nissan 370Z -->
+                <div class="modal fade" id="carModal4" tabindex="-1" aria-labelledby="carModalLabel4"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header bg-secondary text-white">
+                                <h5 class="modal-title" id="carModalLabel4">Nissan 370Z - Detalles</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="https://picsum.photos/700/400" class="img-fluid mb-3 rounded"
+                                    alt="Nissan 370Z">
+                                <p><strong>Precio:</strong> $30,000</p>
+                                <p><strong>Año:</strong> 2020</p>
+                                <p><strong>Motor:</strong> 3.0L V6, 332hp</p>
+                                <p><strong>Descripción:</strong> El Nissan 370Z es conocido por su rendimiento
+                                    deportivo.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal para BMW M4 -->
+                <div class="modal fade" id="carModal5" tabindex="-1" aria-labelledby="carModalLabel5"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header bg-secondary text-white">
+                                <h5 class="modal-title" id="carModalLabel5">BMW M4 - Detalles</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="https://picsum.photos/700/400" class="img-fluid mb-3 rounded" alt="BMW M4">
+                                <p><strong>Precio:</strong> $70,000</p>
+                                <p><strong>Año:</strong> 2021</p>
+                                <p><strong>Motor:</strong> 3.0L I6 TwinTurbo, 473hp</p>
+                                <p><strong>Descripción:</strong> El BMW M4 combina lujo y alto rendimiento.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal para Audi R8 -->
+                <div class="modal fade" id="carModal6" tabindex="-1" aria-labelledby="carModalLabel6"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header bg-secondary text-white">
+                                <h5 class="modal-title" id="carModalLabel6">Audi R8 - Detalles</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="https://picsum.photos/700/400" class="img-fluid mb-3 rounded" alt="Audi R8">
+                                <p><strong>Precio:</strong> $150,000</p>
+                                <p><strong>Año:</strong> 2022</p>
+                                <p><strong>Motor:</strong> 5.2L V10, 602hp</p>
+                                <p><strong>Descripción:</strong> El Audi R8 es un superdeportivo que destaca por su
+                                    potencia y diseño.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row gap-3 m-2 justify-content-center">
+                <!-- Tarjeta de auto 1 -->
+                <div class="card" style="width: 20rem; cursor: pointer;" data-bs-toggle="modal"
+                    data-bs-target="#carModal1">
+                    <img src="https://picsum.photos/300/200" class="card-img-top rounded mx-auto d-block mt-3"
+                        alt="Auto" style="width: 300px; height: 200px;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Ford Mustang</h5>
+                        <p class="card-text"><strong>Precio:</strong> $35,000</p>
+                        <p class="card-text"><strong>Año:</strong> 2023</p>
+                        <p class="card-text"><strong>Motor:</strong> 5.0L V8, 450hp</p>
+                        <p class="card-text"><strong>Combustible:</strong> Gasolina</p>
+                    </div>
+                </div>
+
+                <!-- Modal para auto 1 -->
+                <div class="modal fade" id="carModal1" tabindex="-1" aria-labelledby="carModalLabel1"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="carModalLabel1">Ford Mustang - Detalles</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="https://picsum.photos/700/400" class="img-fluid mb-3 rounded" alt="Auto">
+                                <p><strong>Precio:</strong> $35,000</p>
+                                <p><strong>Año:</strong> 2023</p>
+                                <p><strong>Motor:</strong> 5.0L V8</p>
+                                <p><strong>Potencia:</strong> 450hp</p>
+                                <p><strong>Transmisión:</strong> Manual de 6 velocidades</p>
+                                <p><strong>Combustible:</strong> Gasolina</p>
+                                <p><strong>Consumo:</strong> 12L/100km</p>
+                                <p><strong>Descripción:</strong> El Ford Mustang es un ícono del rendimiento y
+                                    estilo,
+                                    con un potente motor V8 para los amantes de la velocidad.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de auto 2 -->
+                <div class="card" style="width: 20rem; cursor: pointer;" data-bs-toggle="modal"
+                    data-bs-target="#carModal2">
+                    <img src="https://picsum.photos/300/200" class="card-img-top rounded mx-auto d-block mt-3"
+                        alt="Auto" style="width: 300px; height: 200px;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Toyota Supra</h5>
+                        <p class="card-text"><strong>Precio:</strong> $50,000</p>
+                        <p class="card-text"><strong>Año:</strong> 2022</p>
+                        <p class="card-text"><strong>Motor:</strong> 3.0L Turbo, 382hp</p>
+                        <p class="card-text"><strong>Combustible:</strong> Gasolina</p>
+                    </div>
+                </div>
+
+                <!-- Modal para auto 2 -->
+                <div class="modal fade" id="carModal2" tabindex="-1" aria-labelledby="carModalLabel2"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="carModalLabel2">Toyota Supra - Detalles</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="https://picsum.photos/700/400" class="img-fluid mb-3 rounded" alt="Auto">
+                                <p><strong>Precio:</strong> $50,000</p>
+                                <p><strong>Año:</strong> 2022</p>
+                                <p><strong>Motor:</strong> 3.0L Turbo</p>
+                                <p><strong>Potencia:</strong> 382hp</p>
+                                <p><strong>Transmisión:</strong> Automática de 8 velocidades</p>
+                                <p><strong>Combustible:</strong> Gasolina</p>
+                                <p><strong>Consumo:</strong> 9L/100km</p>
+                                <p><strong>Descripción:</strong> El Toyota Supra combina potencia y precisión en un
+                                    coupé deportivo que proporciona emoción en cada curva.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Más tarjetas... -->
+                <!-- Tarjeta de auto 1 -->
+                <div class="card" style="width: 20rem; cursor: pointer;" data-bs-toggle="modal"
+                    data-bs-target="#carModal1">
+                    <img src="https://picsum.photos/300/200" class="card-img-top rounded mx-auto d-block mt-3"
+                        alt="Auto" style="width: 300px; height: 200px;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Ford Mustang</h5>
+                        <p class="card-text"><strong>Precio:</strong> $35,000</p>
+                        <p class="card-text"><strong>Año:</strong> 2023</p>
+                        <p class="card-text"><strong>Motor:</strong> 5.0L V8, 450hp</p>
+                        <p class="card-text"><strong>Combustible:</strong> Gasolina</p>
+                    </div>
+                </div>
+
+                <!-- Modal para auto 1 -->
+                <div class="modal fade" id="carModal1" tabindex="-1" aria-labelledby="carModalLabel1"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="carModalLabel1">Ford Mustang - Detalles</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="https://picsum.photos/700/400" class="img-fluid mb-3 rounded" alt="Auto">
+                                <p><strong>Precio:</strong> $35,000</p>
+                                <p><strong>Año:</strong> 2023</p>
+                                <p><strong>Motor:</strong> 5.0L V8</p>
+                                <p><strong>Potencia:</strong> 450hp</p>
+                                <p><strong>Transmisión:</strong> Manual de 6 velocidades</p>
+                                <p><strong>Combustible:</strong> Gasolina</p>
+                                <p><strong>Consumo:</strong> 12L/100km</p>
+                                <p><strong>Descripción:</strong> El Ford Mustang es un ícono del rendimiento y
+                                    estilo,
+                                    con un potente motor V8 para los amantes de la velocidad.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de auto 2 -->
+                <div class="card" style="width: 20rem; cursor: pointer;" data-bs-toggle="modal"
+                    data-bs-target="#carModal2">
+                    <img src="https://picsum.photos/300/200" class="card-img-top rounded mx-auto d-block mt-3"
+                        alt="Auto" style="width: 300px; height: 200px;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Toyota Supra</h5>
+                        <p class="card-text"><strong>Precio:</strong> $50,000</p>
+                        <p class="card-text"><strong>Año:</strong> 2022</p>
+                        <p class="card-text"><strong>Motor:</strong> 3.0L Turbo, 382hp</p>
+                        <p class="card-text"><strong>Combustible:</strong> Gasolina</p>
+                    </div>
+                </div>
+
+                <!-- Modal para auto 2 -->
+                <div class="modal fade" id="carModal2" tabindex="-1" aria-labelledby="carModalLabel2"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="carModalLabel2">Toyota Supra - Detalles</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="https://picsum.photos/700/400" class="img-fluid mb-3 rounded" alt="Auto">
+                                <p><strong>Precio:</strong> $50,000</p>
+                                <p><strong>Año:</strong> 2022</p>
+                                <p><strong>Motor:</strong> 3.0L Turbo</p>
+                                <p><strong>Potencia:</strong> 382hp</p>
+                                <p><strong>Transmisión:</strong> Automática de 8 velocidades</p>
+                                <p><strong>Combustible:</strong> Gasolina</p>
+                                <p><strong>Consumo:</strong> 9L/100km</p>
+                                <p><strong>Descripción:</strong> El Toyota Supra combina potencia y precisión en un
+                                    coupé deportivo que proporciona emoción en cada curva.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta de auto 1 -->
+                <div class="card" style="width: 20rem; cursor: pointer;" data-bs-toggle="modal"
+                    data-bs-target="#carModal1">
+                    <img src="https://picsum.photos/300/200" class="card-img-top rounded mx-auto d-block mt-3"
+                        alt="Auto" style="width: 300px; height: 200px;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Ford Mustang</h5>
+                        <p class="card-text"><strong>Precio:</strong> $35,000</p>
+                        <p class="card-text"><strong>Año:</strong> 2023</p>
+                        <p class="card-text"><strong>Motor:</strong> 5.0L V8, 450hp</p>
+                        <p class="card-text"><strong>Combustible:</strong> Gasolina</p>
+                    </div>
+                </div>
+
+                <!-- Modal para auto 1 -->
+                <div class="modal fade" id="carModal1" tabindex="-1" aria-labelledby="carModalLabel1"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="carModalLabel1">Ford Mustang - Detalles</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="https://picsum.photos/700/400" class="img-fluid mb-3 rounded" alt="Auto">
+                                <p><strong>Precio:</strong> $35,000</p>
+                                <p><strong>Año:</strong> 2023</p>
+                                <p><strong>Motor:</strong> 5.0L V8</p>
+                                <p><strong>Potencia:</strong> 450hp</p>
+                                <p><strong>Transmisión:</strong> Manual de 6 velocidades</p>
+                                <p><strong>Combustible:</strong> Gasolina</p>
+                                <p><strong>Consumo:</strong> 12L/100km</p>
+                                <p><strong>Descripción:</strong> El Ford Mustang es un ícono del rendimiento y
+                                    estilo,
+                                    con un potente motor V8 para los amantes de la velocidad.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de auto 2 -->
+                <div class="card" style="width: 20rem; cursor: pointer;" data-bs-toggle="modal"
+                    data-bs-target="#carModal2">
+                    <img src="https://picsum.photos/300/200" class="card-img-top rounded mx-auto d-block mt-3"
+                        alt="Auto" style="width: 300px; height: 200px;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Toyota Supra</h5>
+                        <p class="card-text"><strong>Precio:</strong> $50,000</p>
+                        <p class="card-text"><strong>Año:</strong> 2022</p>
+                        <p class="card-text"><strong>Motor:</strong> 3.0L Turbo, 382hp</p>
+                        <p class="card-text"><strong>Combustible:</strong> Gasolina</p>
+                    </div>
+                </div>
+
+                <!-- Modal para auto 2 -->
+                <div class="modal fade" id="carModal2" tabindex="-1" aria-labelledby="carModalLabel2"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="carModalLabel2">Toyota Supra - Detalles</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="https://picsum.photos/700/400" class="img-fluid mb-3 rounded" alt="Auto">
+                                <p><strong>Precio:</strong> $50,000</p>
+                                <p><strong>Año:</strong> 2022</p>
+                                <p><strong>Motor:</strong> 3.0L Turbo</p>
+                                <p><strong>Potencia:</strong> 382hp</p>
+                                <p><strong>Transmisión:</strong> Automática de 8 velocidades</p>
+                                <p><strong>Combustible:</strong> Gasolina</p>
+                                <p><strong>Consumo:</strong> 9L/100km</p>
+                                <p><strong>Descripción:</strong> El Toyota Supra combina potencia y precisión en un
+                                    coupé deportivo que proporciona emoción en cada curva.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta de auto 1 -->
+                <div class="card" style="width: 20rem; cursor: pointer;" data-bs-toggle="modal"
+                    data-bs-target="#carModal1">
+                    <img src="https://picsum.photos/300/200" class="card-img-top rounded mx-auto d-block mt-3"
+                        alt="Auto" style="width: 300px; height: 200px;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Ford Mustang</h5>
+                        <p class="card-text"><strong>Precio:</strong> $35,000</p>
+                        <p class="card-text"><strong>Año:</strong> 2023</p>
+                        <p class="card-text"><strong>Motor:</strong> 5.0L V8, 450hp</p>
+                        <p class="card-text"><strong>Combustible:</strong> Gasolina</p>
+                    </div>
+                </div>
+
+                <!-- Modal para auto 1 -->
+                <div class="modal fade" id="carModal1" tabindex="-1" aria-labelledby="carModalLabel1"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="carModalLabel1">Ford Mustang - Detalles</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="https://picsum.photos/700/400" class="img-fluid mb-3 rounded" alt="Auto">
+                                <p><strong>Precio:</strong> $35,000</p>
+                                <p><strong>Año:</strong> 2023</p>
+                                <p><strong>Motor:</strong> 5.0L V8</p>
+                                <p><strong>Potencia:</strong> 450hp</p>
+                                <p><strong>Transmisión:</strong> Manual de 6 velocidades</p>
+                                <p><strong>Combustible:</strong> Gasolina</p>
+                                <p><strong>Consumo:</strong> 12L/100km</p>
+                                <p><strong>Descripción:</strong> El Ford Mustang es un ícono del rendimiento y
+                                    estilo, con un potente motor V8 para los amantes de la velocidad.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de auto 2 -->
+                <div class="card" style="width: 20rem; cursor: pointer;" data-bs-toggle="modal"
+                    data-bs-target="#carModal2">
+                    <img src="https://picsum.photos/300/200" class="card-img-top rounded mx-auto d-block mt-3"
+                        alt="Auto" style="width: 300px; height: 200px;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Toyota Supra</h5>
+                        <p class="card-text"><strong>Precio:</strong> $50,000</p>
+                        <p class="card-text"><strong>Año:</strong> 2022</p>
+                        <p class="card-text"><strong>Motor:</strong> 3.0L Turbo, 382hp</p>
+                        <p class="card-text"><strong>Combustible:</strong> Gasolina</p>
+                    </div>
+                </div>
+
+                <!-- Modal para auto 2 -->
+                <div class="modal fade" id="carModal2" tabindex="-1" aria-labelledby="carModalLabel2"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="carModalLabel2">Toyota Supra - Detalles</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="https://picsum.photos/700/400" class="img-fluid mb-3 rounded" alt="Auto">
+                                <p><strong>Precio:</strong> $50,000</p>
+                                <p><strong>Año:</strong> 2022</p>
+                                <p><strong>Motor:</strong> 3.0L Turbo</p>
+                                <p><strong>Potencia:</strong> 382hp</p>
+                                <p><strong>Transmisión:</strong> Automática de 8 velocidades</p>
+                                <p><strong>Combustible:</strong> Gasolina</p>
+                                <p><strong>Consumo:</strong> 9L/100km</p>
+                                <p><strong>Descripción:</strong> El Toyota Supra combina potencia y precisión en un
+                                    coupé deportivo que proporciona emoción en cada curva.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta de auto 1 -->
+                <div class="card" style="width: 20rem; cursor: pointer;" data-bs-toggle="modal"
+                    data-bs-target="#carModal1">
+                    <img src="https://picsum.photos/300/200" class="card-img-top rounded mx-auto d-block mt-3"
+                        alt="Auto" style="width: 300px; height: 200px;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Ford Mustang</h5>
+                        <p class="card-text"><strong>Precio:</strong> $35,000</p>
+                        <p class="card-text"><strong>Año:</strong> 2023</p>
+                        <p class="card-text"><strong>Motor:</strong> 5.0L V8, 450hp</p>
+                        <p class="card-text"><strong>Combustible:</strong> Gasolina</p>
+                    </div>
+                </div>
+
+                <!-- Modal para auto 1 -->
+                <div class="modal fade" id="carModal1" tabindex="-1" aria-labelledby="carModalLabel1"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="carModalLabel1">Ford Mustang - Detalles</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="https://picsum.photos/700/400" class="img-fluid mb-3 rounded" alt="Auto">
+                                <p><strong>Precio:</strong> $35,000</p>
+                                <p><strong>Año:</strong> 2023</p>
+                                <p><strong>Motor:</strong> 5.0L V8</p>
+                                <p><strong>Potencia:</strong> 450hp</p>
+                                <p><strong>Transmisión:</strong> Manual de 6 velocidades</p>
+                                <p><strong>Combustible:</strong> Gasolina</p>
+                                <p><strong>Consumo:</strong> 12L/100km</p>
+                                <p><strong>Descripción:</strong> El Ford Mustang es un ícono del rendimiento y
+                                    estilo, con un potente motor V8 para los amantes de la velocidad.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de auto 2 -->
+                <div class="card" style="width: 20rem; cursor: pointer;" data-bs-toggle="modal"
+                    data-bs-target="#carModal2">
+                    <img src="https://picsum.photos/300/200" class="card-img-top rounded mx-auto d-block mt-3"
+                        alt="Auto" style="width: 300px; height: 200px;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Toyota Supra</h5>
+                        <p class="card-text"><strong>Precio:</strong> $50,000</p>
+                        <p class="card-text"><strong>Año:</strong> 2022</p>
+                        <p class="card-text"><strong>Motor:</strong> 3.0L Turbo, 382hp</p>
+                        <p class="card-text"><strong>Combustible:</strong> Gasolina</p>
+                    </div>
+                </div>
+
+                <!-- Modal para auto 2 -->
+                <div class="modal fade" id="carModal2" tabindex="-1" aria-labelledby="carModalLabel2"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="carModalLabel2">Toyota Supra - Detalles</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="https://picsum.photos/700/400" class="img-fluid mb-3 rounded" alt="Auto">
+                                <p><strong>Precio:</strong> $50,000</p>
+                                <p><strong>Año:</strong> 2022</p>
+                                <p><strong>Motor:</strong> 3.0L Turbo</p>
+                                <p><strong>Potencia:</strong> 382hp</p>
+                                <p><strong>Transmisión:</strong> Automática de 8 velocidades</p>
+                                <p><strong>Combustible:</strong> Gasolina</p>
+                                <p><strong>Consumo:</strong> 9L/100km</p>
+                                <p><strong>Descripción:</strong> El Toyota Supra combina potencia y precisión en un
+                                    coupé deportivo que proporciona emoción en cada curva.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta de auto 1 -->
+                <div class="card" style="width: 20rem; cursor: pointer;" data-bs-toggle="modal"
+                    data-bs-target="#carModal1">
+                    <img src="https://picsum.photos/300/200" class="card-img-top rounded mx-auto d-block mt-3"
+                        alt="Auto" style="width: 300px; height: 200px;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Ford Mustang</h5>
+                        <p class="card-text"><strong>Precio:</strong> $35,000</p>
+                        <p class="card-text"><strong>Año:</strong> 2023</p>
+                        <p class="card-text"><strong>Motor:</strong> 5.0L V8, 450hp</p>
+                        <p class="card-text"><strong>Combustible:</strong> Gasolina</p>
+                    </div>
+                </div>
+
+                <!-- Modal para auto 1 -->
+                <div class="modal fade" id="carModal1" tabindex="-1" aria-labelledby="carModalLabel1"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="carModalLabel1">Ford Mustang - Detalles</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="https://picsum.photos/700/400" class="img-fluid mb-3 rounded" alt="Auto">
+                                <p><strong>Precio:</strong> $35,000</p>
+                                <p><strong>Año:</strong> 2023</p>
+                                <p><strong>Motor:</strong> 5.0L V8</p>
+                                <p><strong>Potencia:</strong> 450hp</p>
+                                <p><strong>Transmisión:</strong> Manual de 6 velocidades</p>
+                                <p><strong>Combustible:</strong> Gasolina</p>
+                                <p><strong>Consumo:</strong> 12L/100km</p>
+                                <p><strong>Descripción:</strong> El Ford Mustang es un ícono del rendimiento y
+                                    estilo, con un potente motor V8 para los amantes de la velocidad.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de auto 2 -->
+                <div class="card" style="width: 20rem; cursor: pointer;" data-bs-toggle="modal"
+                    data-bs-target="#carModal2">
+                    <img src="https://picsum.photos/300/200" class="card-img-top rounded mx-auto d-block mt-3"
+                        alt="Auto" style="width: 300px; height: 200px;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Toyota Supra</h5>
+                        <p class="card-text"><strong>Precio:</strong> $50,000</p>
+                        <p class="card-text"><strong>Año:</strong> 2022</p>
+                        <p class="card-text"><strong>Motor:</strong> 3.0L Turbo, 382hp</p>
+                        <p class="card-text"><strong>Combustible:</strong> Gasolina</p>
+                    </div>
+                </div>
+
+                <!-- Modal para auto 2 -->
+                <div class="modal fade" id="carModal2" tabindex="-1" aria-labelledby="carModalLabel2"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="carModalLabel2">Toyota Supra - Detalles</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="https://picsum.photos/700/400" class="img-fluid mb-3 rounded" alt="Auto">
+                                <p><strong>Precio:</strong> $50,000</p>
+                                <p><strong>Año:</strong> 2022</p>
+                                <p><strong>Motor:</strong> 3.0L Turbo</p>
+                                <p><strong>Potencia:</strong> 382hp</p>
+                                <p><strong>Transmisión:</strong> Automática de 8 velocidades</p>
+                                <p><strong>Combustible:</strong> Gasolina</p>
+                                <p><strong>Consumo:</strong> 9L/100km</p>
+                                <p><strong>Descripción:</strong> El Toyota Supra combina potencia y precisión en un
+                                    coupé deportivo que proporciona emoción en cada curva.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer class="row bg-primary text-white py-4">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="mb-3">Contacto</h5>
+                    <p class="mb-0">Email: contacto@vengadeautos.com</p>
+                    <p class="mb-0">Teléfono: (123) 456-7890</p>
+                </div>
+                <div>
+                    <h5 class="mb-3">Síguenos</h5>
+                    <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="#" class="text-white"><i class="fab fa-instagram"></i> Instagram</a>
+                </div>
+                <div>
+                    <h5 class="mb-3">Información</h5>
+                    <a href="#" class="text-white d-block">Términos y Condiciones</a>
+                    <a href="#" class="text-white d-block">Política de Privacidad</a>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: rgba(255, 255, 255, 0.3);">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Venta de Autos. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
