@@ -42,45 +42,109 @@
         </div>
     </header>
     <main class="row mainClandestino">
-        <div class="col-2 bg-white border-end py-4">
-            <h5 class="text-center mb-4">Filtros</h5>
-            <div class="px-3">
-                <h6>Categorías</h6>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="category1">
-                    <label class="form-check-label" for="category1">Sedanes</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="category2">
-                    <label class="form-check-label" for="category2">SUVs</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="category3">
-                    <label class="form-check-label" for="category3">Coupés</label>
-                </div>
+        <div >
+            <!-- Botón para abrir el sidebar solo en pantallas móviles (rediseñado) -->
+            <button class="btn btn-outline-primary d-lg-none m-2" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#sidebarFilters" aria-controls="sidebarFilters"
+                style="border-radius: 20px; padding: 10px 20px;">
+                <!-- Icono de filtros -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-funnel-fill me-2" viewBox="0 0 16 16">
+                    <path
+                        d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .4.8l-4.5 5.4v3.9a.5.5 0 0 1-.2.4l-3 2a.5.5 0 0 1-.8-.4V7.2L1.6 1.8a.5.5 0 0 1-.1-.3z" />
+                </svg>
+                Filtros
+            </button>
+        </div>
+        <!-- Sidebar normal en desktop y offcanvas en móviles -->
+        <div class="row">
+            <div class="col-2 d-none d-lg-block bg-white border-end py-4">
+                <h5 class="text-center mb-4">Filtros</h5>
+                <div class="px-3">
+                    <h6>Categorías</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="category1">
+                        <label class="form-check-label" for="category1">Sedanes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="category2">
+                        <label class="form-check-label" for="category2">SUVs</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="category3">
+                        <label class="form-check-label" for="category3">Coupés</label>
+                    </div>
 
-                <h6 class="mt-4">Precio</h6>
-                <div class="form-group">
-                    <label for="priceRange">Rango de precio:</label>
-                    <input type="range" class="form-range" id="priceRange" min="0" max="100000" step="1000">
-                    <div class="d-flex justify-content-between">
-                        <span>$0</span>
-                        <span>$100,000</span>
+                    <h6 class="mt-4">Precio</h6>
+                    <div class="form-group">
+                        <label for="priceRange">Rango de precio:</label>
+                        <input type="range" class="form-range" id="priceRange" min="0" max="100000" step="1000">
+                        <div class="d-flex justify-content-between">
+                            <span>$0</span>
+                            <span>$100,000</span>
+                        </div>
+                    </div>
+
+                    <h6 class="mt-4">Año</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="year2020">
+                        <label class="form-check-label" for="year2020">2020</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="year2021">
+                        <label class="form-check-label" for="year2021">2021</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="year2022">
+                        <label class="form-check-label" for="year2022">2022</label>
                     </div>
                 </div>
+            </div>
 
-                <h6 class="mt-4">Año</h6>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="year2020">
-                    <label class="form-check-label" for="year2020">2020</label>
+            <!-- Sidebar como offcanvas en móviles -->
+            <div class="offcanvas offcanvas-start d-lg-none" id="sidebarFilters" tabindex="-1">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Filtros</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="year2021">
-                    <label class="form-check-label" for="year2021">2021</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="year2022">
-                    <label class="form-check-label" for="year2022">2022</label>
+                <div class="offcanvas-body">
+                    <h6>Categorías</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="category1-mobile">
+                        <label class="form-check-label" for="category1-mobile">Sedanes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="category2-mobile">
+                        <label class="form-check-label" for="category2-mobile">SUVs</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="category3-mobile">
+                        <label class="form-check-label" for="category3-mobile">Coupés</label>
+                    </div>
+
+                    <h6 class="mt-4">Precio</h6>
+                    <div class="form-group">
+                        <label for="priceRange-mobile">Rango de precio:</label>
+                        <input type="range" class="form-range" id="priceRange-mobile" min="0" max="100000" step="1000">
+                        <div class="d-flex justify-content-between">
+                            <span>$0</span>
+                            <span>$100,000</span>
+                        </div>
+                    </div>
+
+                    <h6 class="mt-4">Año</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="year2020-mobile">
+                        <label class="form-check-label" for="year2020-mobile">2020</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="year2021-mobile">
+                        <label class="form-check-label" for="year2021-mobile">2021</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="year2022-mobile">
+                        <label class="form-check-label" for="year2022-mobile">2022</label>
+                    </div>
                 </div>
             </div>
         </div>
@@ -200,7 +264,8 @@
                                 <p><strong>Precio:</strong> $40,000</p>
                                 <p><strong>Año:</strong> 2021</p>
                                 <p><strong>Motor:</strong> 6.2L V8, 455hp</p>
-                                <p><strong>Descripción:</strong> El Camaro es un muscle car estadounidense clásico.</p>
+                                <p><strong>Descripción:</strong> El Camaro es un muscle car estadounidense clásico.
+                                </p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
