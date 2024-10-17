@@ -1,5 +1,5 @@
 .mainClandestino{
-    background-color: aqua;
+    
 }
 
 .headerClandestino{
@@ -8,4 +8,17 @@
 
 .footerClandestino{
    
+}
+
+.hovertarjetas:hover{
+    transform: scale(1.04);
+    transition: 0.4s;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 250px !important;
+    }
 }
